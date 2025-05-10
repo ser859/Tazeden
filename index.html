@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hawarlaş Yönetici Paneli</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; height: 100vh; justify-content: center; align-items: center; background-color: #f4f4f4; }
+        .login-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input { display: block; width: 100%; padding: 10px; margin-top: 10px; }
+        button { padding: 10px; width: 100%; background-color: #007bff; color: white; border: none; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Yönetici Girişi</h2>
+        <input type="password" id="password" placeholder="Şifreyi girin">
+        <button onclick="login()">Giriş Yap</button>
+        <p id="msg" style="color:red;"></p>
+    </div>
+    <script>
+        function login() {
+            var pass = document.getElementById("password").value;
+            if (pass === "admin123") {
+                window.location.href = "dashboard.html";
+            } else {
+                document.getElementById("msg").innerText = "Hatalı şifre!";
+            }
+        }
+    </script>
+</body>
+</html>
